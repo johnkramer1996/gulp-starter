@@ -1,0 +1,41 @@
+.contacts-list {
+    &__item {
+        padding-left: 35px;
+        position: relative;
+        text-align: left;
+
+        &_social {
+            @include md-min {
+                order: -1;
+            }
+        }
+
+        &_icon-none {
+            padding-left: 0 !important;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__label {}
+
+    &__value {}
+
+    &_row {
+        @include md-min {
+            display: flex;
+            margin-left: -10px;
+            margin-right: -10px;
+
+            .contacts-list__item {
+                margin-left: 10px;
+                margin-right: 10px;
+                padding-left: 25px;
+            }
+        }
+    }
+}

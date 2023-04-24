@@ -1,0 +1,51 @@
+.about {
+
+    &__title {}
+
+    &__subtitle {}
+
+    &__content {
+        @include lg-min {
+            margin-left: -25px;
+            margin-right: -25px;
+        }
+
+        &-block {
+            @include lg-min {
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+
+            &_left {}
+
+            &_right {}
+        }
+    }
+
+    &__items {
+        &-item {}
+
+        &-inner {}
+
+        &-icon {}
+
+        &-text {}
+
+        &-title {}
+
+        &-descr {
+            margin-top: 0;
+            font-weight: 300;
+
+            .text-link {
+                font-weight: 400px;
+            }
+        }
+    }
+}
+
+.s-about {
+    &__bg {}
+
+    &__container {}
+}

@@ -1,0 +1,22 @@
+.simplebar-track {
+    background: #DDDBDB;
+    border-radius: 0;
+    visibility: visible;
+
+    &.simplebar-vertical {
+        width: 4px;
+    }
+
+    &.simplebar-horizontal {
+        height: 4px;
+    }
+}
+
+.simplebar-scrollbar {
+    background-color: $color-accent;
+    border-radius: 0;
+
+    &::before {
+        background-color: $color-accent;
+    }
+}

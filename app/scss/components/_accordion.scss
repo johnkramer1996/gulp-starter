@@ -1,0 +1,140 @@
+.accordion {
+    &__item {
+        background-color: #fff;
+        box-shadow: 0px 10px 50px rgba(112, 112, 107, 0.17);
+        border-radius: 10px;
+    }
+
+    &__heading,
+    &__descr {
+        padding-left: 40px;
+        padding-right: 40px;
+
+        @include sm {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        user-select: none;
+        min-height: 68px;
+        padding-right: 80px;
+        position: relative;
+        transition: color .3s;
+
+        @include sm {
+            min-height: 90px;
+        }
+
+        &-cross {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            right: 30px;
+            width: 48px;
+            height: 48px;
+            background: #F3EEE6;
+            border-radius: 50%;
+            transition: background-color .5s, transform .3s;
+
+            @include sm {
+                width: 28px;
+                height: 28px;
+                top: 20px;
+                right: 20px;
+                bottom: auto;
+            }
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width: 33%;
+                height: 1px;
+                border-radius: 10px;
+                background-color: $color-secondary;
+                transition: background-color .5s, opacity .5s;
+            }
+
+            &::after {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    &__title {}
+
+    &__descr {
+        margin-top: 0;
+        padding-bottom: 40px;
+
+        @include sm {
+            padding-bottom: 30px;
+        }
+
+        &::before {
+            content: '';
+            position: relative;
+            display: block;
+            border-top: 1px solid #C0C0C0;
+            margin-bottom: 20px;
+            transition: width .5s;
+        }
+    }
+
+    // hover 
+
+    &__heading:hover {
+        .accordion__title {
+            color: $color-secondary;
+        }
+
+        .accordion__heading-cross {
+            @include sm-min {
+                background-color: $color-secondary;
+
+                &::before,
+                &::after {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+
+    // js active 
+
+    &__item.js-active &__heading {
+        .accordion__title {
+            color: $color-secondary;
+        }
+
+        &-cross {
+            background-color: transparent;
+            transform: rotate(45deg);
+
+            &::before,
+            &::after {
+                background-color: $color-dark;
+            }
+        }
+    }
+
+    // active 
+
+    &__heading:active &__heading {
+        &-cross {
+            transform: scale(.95);
+        }
+    }
+}

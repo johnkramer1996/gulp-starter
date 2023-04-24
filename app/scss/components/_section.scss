@@ -1,0 +1,202 @@
+.section {
+    position: relative;
+    padding-top: $section-padding-xl;
+    padding-bottom: $section-padding-xl;
+    background: center top / cover no-repeat;
+
+    @include lg {
+        padding-top: $section-padding-lg;
+        padding-bottom: $section-padding-lg;
+    }
+
+    @include sm {
+        padding-top: $section-padding-sm;
+        padding-bottom: $section-padding-sm;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: center top / cover no-repeat;
+        z-index: -1;
+
+        &_light {
+            background-color: rgba($color-light, 0.9);
+        }
+
+        &_dark {
+            background-color: #221F19;
+        }
+
+        &_cloud {
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                left: 0;
+                right: 0;
+                height: 150px;
+                background-position: center bottom;
+                @include bg('../img/bg/cloud', 'png');
+                z-index: 1;
+                pointer-events: none;
+
+                @include r-min(1920) {
+                    height: 100px;
+                    background-size: cover;
+                }
+            }
+
+            &::before {
+                top: 0;
+            }
+
+            &::after {
+                bottom: 0;
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    &__heading {
+        text-align: center;
+        margin-bottom: $margin-xl;
+
+        &_left {
+            text-align: left;
+        }
+
+        &_mb-sm {
+            margin-bottom: 20px;
+        }
+
+        +.text-btn {
+            margin-top: 0;
+        }
+    }
+
+    &__title {
+        position: relative;
+
+        strong {
+            color: $color-secondary;
+        }
+    }
+
+    &__subtitle {
+        margin-top: 10px;
+    }
+}
+
+.section {
+    &_sm {
+        @include sm-min {
+            padding-top: $section-padding-lg;
+            padding-bottom: $section-padding-lg;
+        }
+    }
+
+    &_pt-0 {
+        padding-top: 0;
+    }
+
+    &_pb-0 {
+        padding-bottom: 0;
+    }
+}
+
+.section-img {
+    @include md-min {
+        position: absolute;
+        bottom: 0;
+        pointer-events: none;
+        width: map-get($container-max-widths, xl) / 2;
+    }
+
+    @include md {
+        position: relative;
+        min-height: 100px;
+        max-width: 290px;
+        margin: 0 auto;
+    }
+
+    &_left {
+        text-align: right;
+
+        @include md-min {
+            right: calc(50% + #{map-get($container-max-widths, xl)} / 2);
+            transform: translate(100%);
+            margin-right: 300px;
+        }
+    }
+
+    &_right {
+        text-align: left;
+
+        @include md-min {
+            left: calc(50% + #{map-get($container-max-widths, xl)} / 2);
+            transform: translate(-100%);
+            margin-left: 300px;
+        }
+    }
+
+    &_decor {
+        width: 100px;
+        height: 100px;
+        background: center / contain no-repeat;
+        pointer-events: none;
+        margin: 0;
+    }
+
+    @include md {
+        text-align: center;
+    }
+
+    img {
+        position: relative;
+        pointer-events: none;
+        z-index: -1;
+        max-width: 100%;
+
+        @include md {
+            left: 50%;
+            transform: translate(-50%, 0);
+            max-width: none;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: $section-padding-xl;
+        text-align: center;
+        min-width: 290px;
+
+        &-bg {
+            padding: 25px 30px;
+            display: inline-block;
+            background-color: #fff;
+            box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.25);
+            border-radius: 3px;
+            text-align: left;
+            position: relative;
+
+            @include md {
+                padding: 15px 25px;
+                text-align: center;
+            }
+        }
+
+        &-title {}
+
+        &-descr {
+            margin-top: 5px;
+        }
+    }
+}

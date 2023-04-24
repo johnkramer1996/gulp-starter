@@ -1,0 +1,103 @@
+@keyframes myFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.myFadeIn {
+    animation-name: myFadeIn;
+}
+
+@keyframes myFadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.myFadeInDown {
+    animation-name: myFadeInDown;
+}
+
+@keyframes myFadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translate3d(-100px, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.myFadeInLeft {
+    animation-name: myFadeInLeft;
+}
+
+@keyframes myFadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(100px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.myFadeInRight {
+    animation-name: myFadeInRight;
+}
+
+@keyframes myFadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100px, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.myFadeInUp {
+    animation-name: myFadeInUp;
+}
+
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@media (print),
+(prefers-reduced-motion: reduce) {
+    .animated {
+        animation-duration: 1ms !important;
+        transition-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+
+@keyframes moveScale {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(24px, 0);
+    }
+}

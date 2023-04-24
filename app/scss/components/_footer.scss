@@ -1,0 +1,135 @@
+.footer {
+    padding: 50px 0;
+    background-color: $color-dark;
+
+    @include lg {
+        padding: 40px 0;
+    }
+
+    @include md {
+        text-align: center;
+    }
+
+    &__line {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: -30px -10px 0;
+
+        @include lg {
+            flex-direction: column;
+        }
+
+        &-item {
+            margin-top: 30px;
+            padding: 0 10px;
+
+            &_logo {}
+
+            &_btn {
+                text-align: center;
+            }
+
+            &_contacts {
+
+                .contacts-list__item {
+                    @include md {
+                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        padding-left: 0;
+                    }
+                }
+
+                .contacts-list__icon {
+                    @include md {
+                        position: relative;
+                        margin-right: 10px;
+                    }
+                }
+
+                .contacts-list__value {
+                    @include md {
+                        font-size: 20px;
+                        font-weight: 700;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &__logo {
+        @include md {
+            flex-direction: column;
+            text-align: center;
+
+            .logo__img {
+                max-width: 91px;
+            }
+
+            .logo__text {
+                text-align: center;
+                border-top: 1px solid rgba(156, 155, 153, 0.29);
+                padding-top: 20px;
+                margin: 20px 0 0;
+            }
+        }
+    }
+
+    &__contacts {}
+
+    &__hr {
+        margin: 25px 0;
+        height: 1px;
+        border: none;
+        background-color: #565656;
+
+        @include lg {
+            margin: 35px 0;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        font-size: 14px;
+        margin: 0 -15px -25px;
+        padding-bottom: 1px;
+
+        @include md {
+            flex-direction: column;
+        }
+
+        &-item {
+            padding: 0 15px 25px;
+            width: 100%;
+            text-align: center;
+
+            &_left {
+                @include md-min {
+                    text-align: left;
+                }
+            }
+
+            &_center {
+                @include md {
+                    order: -1;
+                }
+            }
+
+            &_right {
+                @include md-min {
+                    text-align: right;
+                }
+            }
+
+            li {
+                margin-top: 5px;
+            }
+        }
+    }
+}

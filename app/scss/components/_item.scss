@@ -1,0 +1,137 @@
+.items {
+    margin-bottom: -$margin-lg;
+    padding-bottom: 1px;
+
+    @include sm {
+        margin-bottom: -$margin-sm;
+    }
+
+    &__item {
+        margin-bottom: $margin-lg;
+
+        @include sm {
+            margin-bottom: $margin-sm;
+        }
+
+        &_title {
+            text-align: center;
+        }
+
+        &_btn {
+            margin-top: 10px;
+            text-align: center;
+
+            .btn {}
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        position: relative;
+        z-index: 3;
+
+        &_row {
+            flex-direction: row;
+        }
+    }
+
+    &__img,
+    &__icon {
+        flex-shrink: 0;
+    }
+
+    &__img {}
+
+    &__icon {}
+
+    &__text {}
+
+    &__title {}
+
+    &__descr {}
+}
+
+.items {
+    &_slider {
+        width: 100%;
+        margin-bottom: 0;
+
+        .items__item {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.item-bg {
+    border-radius: 10px;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0px 20px 120px rgba(43, 42, 41, 0.18);
+    transition: background-color .5s, box-shadow .5s;
+    position: relative;
+    z-index: 5;
+
+    @include xl {
+        padding: 30px;
+    }
+
+    @include xs {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        right: 6px;
+        bottom: 6px;
+        border: 1px solid #C8C7C6;
+        border-radius: inherit;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    &_padding-0 {
+        padding: 0;
+    }
+
+    &_shadow-none {
+        box-shadow: none;
+    }
+
+    &_dark {
+        background-color: $color-dark;
+
+        &::before {
+            border-color: #fff;
+        }
+    }
+
+    &_sm {
+        padding: 20px;
+    }
+}
+
+.inner {
+    text-align: center;
+
+    @include md-min {
+        text-align: left;
+    }
+
+    &_right {
+        @include md-min {
+            margin-left: auto;
+        }
+    }
+
+    &_w-50 {
+        @include md-min {
+            max-width: 50%;
+        }
+    }
+}

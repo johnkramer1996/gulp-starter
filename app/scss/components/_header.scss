@@ -1,0 +1,275 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: $z-index-popup - 1;
+    min-width: 320px;
+    transition: padding .3s;
+
+    @include lg {
+        position: fixed;
+        background-color: #fff;
+        box-shadow: 0px 4px 30px rgba(112, 112, 112, 0.2);
+    }
+
+    &-height {
+        height: $header-height;
+
+        @include lg {
+            height: $header-height-lg;
+        }
+    }
+
+    &__line {
+        display: flex;
+        align-items: center;
+        margin: 0 -5px;
+        min-height: $header-height;
+        position: relative;
+
+        @include lg-min {
+            flex-wrap: wrap;
+        }
+
+        @include lg {
+            min-height: $header-height-lg;
+            justify-content: space-between;
+        }
+
+        &-item {
+            padding: 10px 5px;
+
+
+            &_button-burger {
+                @include lg-min {
+                    display: none;
+                    order: -1;
+                    margin-right: 0;
+                }
+            }
+
+            &_button-phone {}
+
+            &_phone {}
+
+            &_logo {
+                @include lg-min {
+                    margin-right: auto;
+                    order: -1;
+                }
+            }
+
+            &_menu {
+                @include lg-min {
+                    flex-basis: 100%;
+                    order: 13;
+                    padding-bottom: 0;
+                }
+            }
+
+            &_contacts {}
+
+            &_btn {}
+        }
+    }
+
+    &__logo {}
+
+    &__menu {}
+
+    &__contacts {}
+
+    &__button {
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        box-shadow: 0px 10px 50px rgba(26, 40, 78, 0.1);
+        z-index: 5;
+        position: relative;
+
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+
+            path {
+                fill: $color-accent;
+                transition: fill .3s;
+            }
+        }
+
+        &_burger {
+            margin-left: -5px;
+        }
+
+        &_phone {
+            margin-right: -5px;
+        }
+
+        // focus 
+
+        &:focus {
+            path {
+                fill: $color-dark;
+            }
+        }
+    }
+}
+
+.header {
+    &__line {
+        &_mobile {
+            @include lg-min {
+                display: none;
+            }
+        }
+
+        &_desctop {
+            @include lg {
+                position: fixed;
+                top: $header-height-lg;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                justify-content: start;
+                z-index: $z-index-popup - 1;
+                min-width: 320px;
+                overflow: auto;
+                height: calc(100vh - #{$header-height-lg});
+                padding: 0px 0 40px;
+                background-color: $color-dark;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity .5s, visibility .5s;
+
+                &,
+                .contacts-list__item,
+                .contacts-list__item .text-link {
+                    color: #fff;
+                }
+
+                .contacts-list__value {
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+            }
+
+            .header__line-item {
+                @include lg {
+                    margin: 35px auto 0;
+                    padding: 0 15px;
+                    @include width-container;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            .header__line-item_button-burger {
+                @include lg {
+                    display: none;
+                }
+            }
+
+            .header__line-item_menu {
+                @include lg {
+                    background-color: #fff;
+                    position: relative;
+
+                    &::before,
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        width: 100%;
+                        background-color: inherit;
+                    }
+
+                    &::before {
+                        left: 100%;
+                    }
+
+                    &::after {
+                        right: 100%;
+                    }
+                }
+            }
+
+            .header__line-item_logo {
+                @include lg {
+                    display: none;
+                }
+            }
+
+            .contacts-list__icon {
+                width: 16px;
+
+                path {
+                    @include lg {
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes header-visible {
+    0% {
+        transform: translate(0, -100%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+.header {
+    &.js-fixed {
+        @include lg-min {
+            position: fixed;
+            background-color: #fff;
+            box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.1);
+            animation: header-visible .5s linear 1;
+
+            .header__line {
+                min-height: 1px;
+            }
+
+            .header__line-item {}
+
+            .header__line-item_button-burger {
+                display: block;
+            }
+
+            .header__line-item_menu {
+                display: none;
+
+                body.js-menu-active & {
+                    display: block;
+                    animation-duration: 1s;
+                    animation-name: myFadeIn;
+                    animation-fill-mode: both;
+                }
+            }
+        }
+    }
+
+    // js menu open
+
+    body.js-menu-active &__line_desctop {
+        @include lg {
+            opacity: 1;
+            visibility: visible;
+            overflow-x: hidden;
+        }
+    }
+}

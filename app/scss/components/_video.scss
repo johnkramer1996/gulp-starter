@@ -1,0 +1,82 @@
+.video {
+    &__link {
+        display: block;
+        position: relative;
+        text-align: center;
+    }
+
+    &__img {
+        z-index: 2;
+        position: relative;
+
+        &::after {
+            background-color: rgba($color-light, .9);
+        }
+    }
+
+    &__position {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translate(0, -50%);
+        padding-left: 10px;
+        padding-right: 10px;
+        z-index: 4;
+    }
+
+    &__play {
+        width: 100px;
+        height: 100px;
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        flex-shrink: 0;
+        background-color: $color-accent;
+        border: 1px dashed $color-accent;
+        border-radius: 50%;
+        transition: all .3s;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            transform: translate(5px, 0);
+            width: 25px;
+            height: 32px;
+            background: center / contain no-repeat;
+            background-image: url("data:image/svg+xml,%3Csvg width='25' height='32' viewBox='0 0 25 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.215637 0.627441V31.3725L24.3725 16L0.215637 0.627441Z' fill='%23#{str-slice(#fff + '', 2)}'/%3E%3C/svg%3E%0A");
+            transition: opacity .3s;
+        }
+
+        &::after {
+            background-image: url("data:image/svg+xml,%3Csvg width='25' height='32' viewBox='0 0 25 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.215637 0.627441V31.3725L24.3725 16L0.215637 0.627441Z' fill='%23#{str-slice($color-accent + '', 2)}'/%3E%3C/svg%3E%0A");
+            opacity: 0;
+        }
+    }
+
+    &__label {
+        margin-top: 20px;
+    }
+}
+
+
+.video {
+
+    a#{&}:hover &__play,
+    &__link:hover &__play {
+        background-color: #fff;
+
+        &::before {
+            opacity: 0;
+        }
+
+        &::after {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.contacts {
+    &__inner {
+        z-index: 3;
+    }
+
+    &__logo {}
+
+    &__list {}
+
+    &__btn {}
+}
+
+.s-contacts {
+    &__bg {}
+
+    &__map {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+
+        @include md {
+            position: relative;
+            min-height: 600px;
+            margin-bottom: -150px;
+        }
+
+        @include md-min {
+            position: absolute;
+        }
+    }
+
+    &__container {}
+}

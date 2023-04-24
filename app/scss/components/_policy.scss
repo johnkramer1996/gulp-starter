@@ -1,0 +1,39 @@
+.policy {
+    font-size: 14px;
+    line-height: $text-line-height;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 160px;
+        background: linear-gradient(360deg, #fff 0%, rgba(255, 255, 255, .0) 100%);
+        pointer-events: none;
+    }
+
+    &__items {
+        padding-right: 10px;
+        overflow-y: auto;
+        height: 100%;
+        padding-bottom: 100px;
+
+        &-item {}
+
+        &-title {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        &-descr {
+            li {
+                margin-top: 2px;
+            }
+        }
+    }
+}

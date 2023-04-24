@@ -1,0 +1,48 @@
+{
+    "name": "gulp",
+    "version": "1.0.0",
+    "description": "Сборка gulp",
+    "main": "index.html",
+    "scripts": {
+			"start": "gulp",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Zinoviev Vitalii",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.12.9",
+        "@babel/preset-env": "^7.12.7",
+        "babel-loader": "^8.2.2",
+        "babel-plugin-module-resolver": "^4.0.0",
+        "browser-sync": "^2.26.13",
+        "del": "^5.1.0",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.1",
+        "gulp-babel": "^8.0.0",
+        "gulp-beautify": "^3.0.0",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-file-include": "^2.2.2",
+        "gulp-fonter": "^0.3.0",
+        "gulp-imagemin": "^7.1.0",
+        "gulp-newer": "^1.4.0",
+        "gulp-rename": "^2.0.0",
+        "gulp-sass": "^4.1.0",
+        "gulp-ttf2woff": "^1.1.1",
+        "gulp-ttf2woff2": "^3.0.0",
+        "gulp-uglify-es": "^2.0.0",
+        "gulp-webp": "^4.0.1",
+        "webpack": "^5.58.2",
+        "webpack-stream": "^6.1.1"
+    },
+    "dependencies": {
+        "bootstrap": "^4.5.3",
+        "choices.js": "^9.0.1",
+        "fslightbox": "^3.2.3",
+        "inputmask": "^5.0.5",
+        "object-fit-images": "^3.2.4",
+        "simplebar": "^5.3.6",
+        "swiper": "^6.4.5",
+        "vanilla-lazyload": "^17.3.0",
+        "vanillajs-datepicker": "^1.1.4"
+    }
+}

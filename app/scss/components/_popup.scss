@@ -1,0 +1,224 @@
+.popup {
+    position: fixed;
+    z-index: $z-index-popup;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 1s, opacity 1s;
+    min-width: 320px;
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba($color-dark, .85) center / cover no-repeat;
+        z-index: 4;
+    }
+
+    &__wrapper {
+        display: table;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__inner {
+        display: table-cell;
+        vertical-align: middle;
+        overflow: hidden;
+        width: 100%;
+        padding: 90px 15px;
+
+        @include sm {
+            padding: 60px 10px;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 5;
+        border-radius: 0;
+        margin: 0 auto;
+        @include width-container;
+
+        @include xxl {
+            @include lg-min {
+                width: 910px;
+            }
+        }
+
+        &_md {
+            width: auto;
+            max-width: 660px;
+
+            @include xl {
+                max-width: 470px;
+            }
+        }
+
+        &_callback {}
+
+        &_thanks {}
+
+        &_policy {
+            .popup__content-inner {
+                min-height: 400px;
+                height: calc(100vh - 180px);
+            }
+        }
+
+        &_video {}
+
+        &_p-0 {
+            padding: 0;
+        }
+
+        &-inner {}
+
+        // js active
+
+        &.js-active {
+            display: block !important;
+            animation-duration: 1s;
+            animation-name: myFadeIn;
+            animation-fill-mode: both;
+        }
+    }
+
+    &__title {}
+
+    &__subtitle {}
+
+    &__img {
+        @include md {
+            margin: -80px auto -30px;
+        }
+
+        @include md-min {
+            z-index: -3;
+        }
+
+        img {
+            @include md {
+                width: 500px;
+            }
+        }
+    }
+
+    &__policy {
+        height: 100%;
+    }
+
+    &__video {
+        background-color: transparent;
+
+        &::before {
+            padding-top: 56%;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 4;
+        }
+    }
+
+    &__close {
+        z-index: 5;
+        position: absolute;
+        bottom: 100%;
+        left: 100%;
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        border: none;
+        background: transparent;
+        border-radius: 0;
+        transition: background-color .3s;
+
+        @include xl {
+            width: 40px;
+            height: 40px;
+            top: auto;
+            left: auto;
+            right: 0;
+            margin-bottom: 10px;
+            bottom: 100%;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 60%;
+            height: 2px;
+            margin: auto;
+            background-color: #fff;
+            transition: background-color .3s, transform .3s;
+
+            @include xl {
+                width: 100%;
+            }
+        }
+
+        &::before {
+            transform: rotate(45deg)
+        }
+
+        &::after {
+            transform: rotate(-45deg)
+        }
+
+        // hover
+
+        &:hover {
+
+            &::before,
+            &::after {
+                background-color: $color-secondary;
+            }
+
+            &::before {
+                transform: rotate(-45deg)
+            }
+
+            &::after {
+                transform: rotate(-135deg)
+            }
+        }
+
+        // active
+
+        &:active {
+
+            &::before,
+            &::after {
+                background-color: $color-accent-dark;
+            }
+
+        }
+    }
+}
+
+.popup {
+    // js active
+
+    &.js-active {
+        pointer-events: auto;
+        opacity: 1;
+        visibility: visible;
+    }
+}

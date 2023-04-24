@@ -1,0 +1,30 @@
+.breadcrumbs {
+    li {
+        display: inline-block;
+        margin-right: 5px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        +li {
+            &::before {
+                content: '';
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                width: 3px;
+                height: 3px;
+                background-color: $color-accent;
+                margin-right: 5px;
+            }
+        }
+
+        a {
+
+            // hover 
+
+            &:hover {}
+        }
+    }
+}

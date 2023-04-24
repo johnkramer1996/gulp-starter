@@ -1,0 +1,29 @@
+.form {
+
+    &__title,
+    &__subtitle {
+        margin-bottom: 25px;
+    }
+
+    &__title {
+        font-weight: 700;
+    }
+
+    &__subtitle {
+        margin-top: -20px;
+        font-weight: 400;
+    }
+
+    &__form {
+        margin-top: 25px;
+    }
+
+    &__policy {
+        margin-top: 30px;
+        text-align: center;
+
+        .input-checkbox {
+            display: inline-block;
+        }
+    }
+}

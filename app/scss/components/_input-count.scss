@@ -1,0 +1,51 @@
+.input-count {
+    position: relative;
+
+    &__input {
+        text-align: center;
+    }
+
+    &__operation {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 24px;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+        border-radius: 50%;
+        background-color: $color-dark;
+        user-select: none;
+        cursor: pointer;
+        transition: background-color .3s, color .3s;
+
+        &_minus {
+            left: 20px;
+            line-height: 19px;
+        }
+
+        &_plus {
+            right: 20px;
+        }
+    }
+}
+
+.input-count {
+    &__operation {
+        &:hover {
+            color: $color-text;
+            background-color: $color-accent;
+        }
+
+        &:active {
+            background-color: $color-accent-dark;
+        }
+
+        &.js-active {
+            background-color: $color-accent;
+        }
+    }
+}

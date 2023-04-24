@@ -1,0 +1,20 @@
+.map {
+    position: relative;
+    min-height: 300px;
+    z-index: 1;
+
+    &__map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $color-dark;
+        height: 100%;
+
+        [class*="ymaps-2"][class*="-ground-pane"] {
+            transition: filter .3s;
+            filter: brightness(.5);
+        }
+    }
+}

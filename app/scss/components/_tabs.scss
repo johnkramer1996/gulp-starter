@@ -1,0 +1,134 @@
+.tabs {
+    text-align: center;
+
+    &__nav {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        border: 1px solid $color-accent;
+        border-radius: 10px;
+        width: 100%;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            width: 100%;
+            padding: 5px 10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: $text-font-family;
+            color: $color-text;
+            line-height: $text-line-height;
+            cursor: pointer;
+            user-select: none;
+            transition: color .5s, background-color .5s;
+            position: relative;
+            z-index: 5;
+        }
+
+        &-bg {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            border-radius: inherit;
+            box-shadow: 0px 12px 20px rgba(55, 42, 26, 0.37);
+            cursor: pointer;
+            transition: left .5s;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: -1;
+                border-radius: inherit;
+            }
+
+            &::before {
+                background: #D50000;
+                border: 2px solid #D50000;
+            }
+
+            &::after {
+                z-index: 99;
+            }
+
+            &.js-move {
+                transition: left .0s;
+            }
+        }
+    }
+
+    &__content {
+        margin-top: $margin-xl;
+        text-align: left;
+
+        @include md {
+            margin-top: $margin-lg;
+        }
+    }
+}
+
+.tabs {
+    &__nav {
+        &-item {
+            // hover
+
+            &:hover {
+                color: $color-secondary;
+            }
+
+            // js active
+
+            &.js-active {
+                color: #fff;
+                border-radius: 4px;
+
+                &::before {
+                    opacity: 0;
+                }
+            }
+
+            // active 
+
+            &:active {
+                color: $color-accent;
+            }
+        }
+    }
+}
+
+.js-tabs {
+    &-nav {
+        &-item {}
+    }
+
+    &-content {
+        &-item {
+            // js active
+
+            &.js-active {
+                display: block !important;
+                animation-duration: 1s;
+                animation-name: myFadeIn;
+                animation-fill-mode: both;
+            }
+        }
+    }
+
+    &.js-clicked {
+        .tabs__nav-cursor {
+            opacity: 0 !important;
+            transition-delay: 0s;
+            visibility: hidden;
+        }
+    }
+}

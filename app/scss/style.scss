@@ -1,0 +1,66 @@
+@import './vars';
+@import './placeholders';
+@import './mixin';
+@import './import';
+@import './fonts';
+@import './reset';
+@import './base';
+
+@import './vendors/t-scroll';
+
+@import './components/animation';
+
+@import './components/heading';
+@import './components/text';
+@import './components/img';
+@import './components/form';
+@import './components/input-text';
+@import './components/input-select';
+@import './components/input-checkbox';
+@import './components/input-range';
+@import './components/input-file';
+@import './components/input-count';
+@import './components/input-date';
+@import './components/btn';
+
+@import './components/item';
+@import './components/video';
+@import './components/table';
+@import './components/breadcrumbs';
+@import './components/pagination';
+@import './components/policy';
+@import './components/socials';
+
+@import './components/fslightbox';
+@import './components/swiper';
+@import './components/tabs';
+@import './components/accordion';
+@import './components/map';
+@import './components/simplebar';
+
+@import './components/developer';
+
+@import './components/section';
+@import './components/logo';
+@import './components/menu';
+@import './components/preloader';
+@import './components/popup';
+@import './components/gallery';
+@import './components/contacts-list';
+@import './components/header';
+@import './components/footer';
+
+@import './sections/main';
+@import './sections/triggers';
+@import './sections/offers';
+@import './sections/catalog';
+@import './sections/quiz';
+@import './sections/advantages';
+@import './sections/application';
+@import './sections/about';
+@import './sections/team';
+@import './sections/types';
+@import './sections/faq';
+@import './sections/contacts';
+
+@import './components/components';

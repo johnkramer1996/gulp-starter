@@ -1,0 +1,139 @@
+.team {
+
+    &__title {}
+
+    &__items {
+        &-item {
+            &.swiper-slide {
+                opacity: 0.1;
+
+                &.swiper-slide-visible {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &-inner {}
+
+        &-img {
+            border-radius: 50%;
+            max-width: 252px;
+            width: 100%;
+            margin: 0 auto 35px;
+
+            &::before {
+                padding-top: 100%;
+            }
+
+            &::after {
+                border: 1px solid #C2C1C0;
+                top: 4px;
+                left: 4px;
+                right: 4px;
+                bottom: 4px;
+                border-radius: inherit;
+            }
+        }
+
+        &-icon {}
+
+        &-text {}
+
+        &-title {
+            font-weight: 600;
+            font-family: $text-font-family;
+        }
+
+        &-position {
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        &-icon {
+            display: block;
+            position: relative;
+            width: 24px;
+            height: 24px;
+            margin: 8px auto;
+            background: center / contain no-repeat;
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.3887 10.8249C21.3829 9.80062 20.0495 9.20766 18.6211 9.1462C18.6144 9.05695 18.6094 8.93395 18.6094 8.76562C18.6094 8.076 19.1338 5.96883 19.4644 4.80263L19.8027 3.60938H15.6972L15.4222 4.05248C15.3131 4.22827 12.75 8.43056 12.75 14.7656C12.75 17.8673 15.2734 20.3906 18.375 20.3906C21.4766 20.3906 24 17.8673 24 14.7656C24 13.2825 23.4278 11.883 22.3887 10.8249ZM18.375 18.5156C16.3073 18.5156 14.625 16.8334 14.625 14.7656C14.625 10.11 16.1642 6.66403 16.7724 5.48438H17.341C17.0716 6.543 16.7344 8.01755 16.7344 8.76562C16.7344 9.35925 16.7784 9.83616 16.9936 10.2342C17.1853 10.5888 17.5862 11.0111 18.4085 11.0156L18.4494 11.0166C20.4761 11.0559 22.125 12.7377 22.125 14.7656C22.125 16.8334 20.4427 18.5156 18.375 18.5156Z' fill='%23E0D5C8'/%3E%3Cpath d='M9.63872 10.8249C8.63288 9.80062 7.29947 9.20766 5.87114 9.1462C5.86439 9.05695 5.85938 8.93395 5.85938 8.76562C5.85938 8.076 6.38381 5.96883 6.71442 4.80263L7.05272 3.60938H2.94722L2.6722 4.05248C2.56312 4.22827 0 8.43056 0 14.7656C0 17.8673 2.52338 20.3906 5.625 20.3906C8.72663 20.3906 11.25 17.8673 11.25 14.7656C11.25 13.2825 10.6778 11.883 9.63872 10.8249ZM5.625 18.5156C3.55725 18.5156 1.875 16.8334 1.875 14.7656C1.875 10.11 3.41419 6.66403 4.02244 5.48438H4.59098C4.32159 6.543 3.98438 8.01755 3.98438 8.76562C3.98438 9.35925 4.02844 9.83616 4.24364 10.2342C4.43531 10.5888 4.83619 11.0111 5.65847 11.0156L5.69939 11.0166C7.72612 11.0559 9.375 12.7377 9.375 14.7656C9.375 16.8334 7.69275 18.5156 5.625 18.5156Z' fill='%23E0D5C8'/%3E%3C/svg%3E%0A");
+            padding-left: 30px;
+            position: relative;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 24px;
+                height: 0px;
+                border-top: 1px solid #E0D5C8;
+            }
+
+            &::before {
+                right: 100%;
+                margin-right: 10px;
+            }
+
+            &::after {
+                left: 100%;
+                margin-left: 10px;
+            }
+        }
+
+        &-descr {
+            margin-top: 0;
+            max-width: 215px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 14px;
+        }
+
+        &-slider {}
+
+        &-controls {
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                @include md {
+                    bottom: auto;
+                    top: 131px;
+                    margin-top: -15px;
+                }
+            }
+
+            .swiper-button-prev {
+                left: -15px;
+
+                @include xxs {
+                    left: 0;
+                }
+
+                @include xl-min {
+                    left: -80px;
+                }
+            }
+
+            .swiper-button-next {
+                right: -15px;
+
+                @include xxs {
+                    right: 0;
+                }
+
+                @include xl-min {
+                    right: -80px;
+                }
+            }
+        }
+    }
+}
+
+.s-team {
+
+    &__bg {}
+
+    &__container {}
+}

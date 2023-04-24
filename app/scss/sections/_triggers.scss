@@ -1,0 +1,35 @@
+.triggers {
+    position: relative;
+
+    &__items {
+        &-item {}
+
+        &-inner {}
+
+        &-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 150px;
+
+            &_1 {}
+
+            &_2 {}
+
+            &_3 {}
+        }
+
+        &-text {
+            padding-left: 150px;
+        }
+
+        &-title {}
+
+        &-descr {}
+    }
+}
+
+.s-triggers {
+    &__container {}
+}

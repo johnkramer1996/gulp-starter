@@ -1,0 +1,83 @@
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-bottom: 5px;
+
+    &__item {
+        margin-bottom: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    &__link {
+        display: block;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        background-color: $color-dark;
+        text-align: center;
+        transition: background-color .3s, border-color .3s, transform .3s;
+
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width: 60%;
+            height: 60%;
+
+            path {
+                fill: #fff;
+                transition: fill .3s;
+            }
+        }
+    }
+}
+
+.socials {
+    &_sm {
+        .socials__link {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+.socials {
+    &__link {
+
+        @each $name,
+        $color in $socials {
+            &_#{$name} {
+                background-color: $color;
+
+                // hover
+
+                &:hover {
+                    @include lg_min {
+                        background-color: darken($color, 5%);
+                    }
+                }
+
+                // hover mobile
+
+                &:active {
+                    @include lg {
+                        background-color: darken($color, 5%);
+                    }
+                }
+            }
+        }
+
+        // active
+
+        &:active {
+            transform: scale(.95);
+        }
+    }
+}

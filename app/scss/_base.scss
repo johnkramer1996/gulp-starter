@@ -1,0 +1,194 @@
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $text-font-family, sans-serif;
+    font-size: $text-font-size;
+    color: $color-text;
+    line-height: $text-line-height;
+    font-weight: $text-font-weigth;
+    background-color: #fff;
+    overflow-x: hidden;
+    position: relative;
+    min-width: 320px;
+
+    &.js-popup-active,
+    &.js-menu-active {
+        @include lg {
+            overflow: hidden;
+        }
+    }
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+}
+
+button,
+input {
+    font-family: $text-font-family;
+}
+
+::placeholder {
+    color: $color-placeholder;
+
+    .input_white & {
+        color: #fff;
+    }
+
+    .js-input.js-error & {
+        color: $color-error;
+    }
+}
+
+::selection {
+    background-color: $color-accent;
+    color: #fff;
+}
+
+input,
+textarea {
+    outline: none;
+
+    &:focus:required:invalid {
+        border-color: red;
+    }
+
+    &:required:valid {
+        border-color: green;
+    }
+}
+
+input,
+textarea,
+button,
+select {
+    appearance: none;
+}
+
+input:focus,
+textarea:focus,
+button:focus,
+select:focus {
+    outline: none;
+}
+
+// hide arrows
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+img,
+svg {
+    vertical-align: middle;
+}
+
+img {}
+
+svg {
+    path {
+        transition: fill .3s, stroke .3s;
+    }
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+a {
+    color: $color-text;
+    outline: none;
+    text-decoration: none;
+    transition: color .3s;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+sup {
+    display: inline-block;
+    position: relative;
+    transform: scale(.6);
+    transform-origin: center 0;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+
+// @keyframes leaf-levitation {
+//     0% {
+//         transform: translate(0, 0) rotate(0);
+//     }
+
+//     25% {
+//         transform: translate(-30%, -45%) rotate(50deg);
+//     }
+
+//     50% {
+//         transform: translate(-60%, 0) rotate(0);
+//     }
+
+//     75% {
+//         transform: translate(-30%, 45%) rotate(-50deg);
+//     }
+
+//     100% {
+//         transform: translate(0, 0) rotate(0);
+//     }
+// }
+
+// .leaf-animation {
+//     animation-name: leaf-levitation;
+//     animation-duration: 20s;
+//     animation-iteration-count: infinite;
+//     animation-timing-function: linear;
+// }

@@ -1,0 +1,63 @@
+.main {
+    &__inner {
+        max-width: 850px;
+    }
+
+    &__heading {
+        margin-bottom: 30px;
+    }
+
+    &__title {}
+
+    &__subtitle {}
+
+    &__triggers {
+        &-item {
+            position: relative;
+            padding-left: 28px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 4px;
+                left: 0;
+                width: 15px;
+                height: 15px;
+                background: #000 center / contain no-repeat;
+            }
+        }
+    }
+
+    &__offer {
+        margin-top: 30px;
+        z-index: 1;
+
+        &-img {
+            position: absolute;
+            left: 334px;
+            top: 0;
+
+            img {
+                width: 370px;
+            }
+        }
+    }
+
+    &__btn {}
+
+    &__img {
+        z-index: 2;
+    }
+
+    &__decor {}
+}
+
+.s-main {
+    @include lg-min {
+        min-height: 800px;
+    }
+
+    &__bg {}
+
+    &__container {}
+}

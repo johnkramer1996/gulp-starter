@@ -1,0 +1,110 @@
+// color
+$color-text: #333;
+$color-accent: #D50000;
+$color-secondary: #977246;
+$color-accent-light: lighten($color-accent, 5%);
+$color-accent-dark: darken($color-accent, 10%);
+$color-secondary-light: lighten($color-secondary, 5%);
+$color-secondary-dark: darken($color-secondary, 10%);
+$color-dark: #24211C;
+$color-light: #F9F9F9;
+$color-gray: #F2F5FC;
+$color-inactive: #80758F;
+$color-placeholder: #333;
+$color-disabled: #ddd;
+$color-error: #db422c;
+$color-error-light: #ffeaea;
+// color
+// font
+$font: 'Montserrat';
+// font
+// text
+$text-font-size: 16px;
+$text-font-family: $font,
+sans-serif;
+$text-line-height: 1.5;
+$text-font-weigth: 400;
+// text
+// inputs
+$input-height: 68px;
+$input-mb: 20px;
+$textarea-height: 120px;
+// inputs
+$btn-height: 50px;
+$btn-height-xs: 30px;
+$btn-height-sm: 40px;
+$btn-height-md: 60px;
+$btn-height-lg: 70px;
+$btn-height-xl: 80px;
+// inputs
+// header
+$header-height: 160px;
+$header-height-fixed: 75px;
+$header-height-lg: 70px;
+// header
+// section
+$section-padding-xl: 80px;
+$section-padding-lg: 60px;
+$section-padding-sm: 40px;
+// section
+// margin
+$margin-xl: 50px;
+$margin-lg: 40px;
+$margin-md: 30px;
+$margin-sm: 20px;
+$margin-xs: 10px;
+// margin
+// padding
+$padding-xl: 60px;
+$padding-lg: 50px;
+$padding-md: 40px;
+$padding-sm: 30px;
+$padding-xs: 20px;
+// padding
+// z index
+$z-index-popup: 99;
+// z index
+// socials
+$socials: ( //
+    "wa": #1BD741,
+    "vb": #7D3DAF,
+    "tg": #61A8DE,
+    "fb": #3A559F,
+    "inst":#C536A4,
+    "vk": #44678D,
+    "sms": #459133,
+    "mail": #275df0,
+);
+// socials
+// breakpoints
+$xxs: 370;
+$xs: 480;
+$sm: 576;
+$md: 767;
+$lg: 992;
+$xl: 1200;
+$xxl: 1360;
+$xxxl: 1600;
+$xxxxl: 1920;
+$grid-gutter-width: 30px;
+$gutter: $grid-gutter-width;
+$grid-breakpoints: ( //
+    xs: 0,
+    sm: 576px,
+    md: 767px,
+    lg: 992px,
+    xl: 1200px,
+    // xxl: 1360px,
+    // xxxl: 1600px,
+    // xxxxl: 1920px
+);
+$container-max-widths: ( //
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1170px,
+    // xxl: 1320px,
+    // xxxl: 1560px,
+    // xxxxl: 1870px
+);
+// breakpoints

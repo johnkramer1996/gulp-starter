@@ -1,0 +1,311 @@
+<div class="popup js-popup">
+	<!-- overlay -->
+	<div class="popup__overlay js-popup-close"></div>
+	<!-- /overlay -->
+	<!-- wrapper -->
+	<div class="popup__wrapper">
+		<!-- inner -->
+		<div class="popup__inner">
+			<!-- question -->
+			<div class="popup__content popup__content_callback popup__content_md js-popup-content" id="popup-question">
+				<!-- inner -->
+				<div class="popup__content-inner form item-bg">
+					<!-- heading -->
+					<div class="section__heading section__heading_left section__heading_mb-sm popup__heading">
+						<div class="section__title h2 popup__title js-popup-title" data-default="<strong>Задайте вопрос</strong> нашему&nbsp;специалисту"></div>
+						<div class="section__subtitle h4 popup__subtitle js-popup-subtitle" data-default="Ответим в течение рабочего дня!"></div>
+					</div>
+					<!-- /heading -->
+					<!-- form -->
+					<form class="form__form js-form">
+						<div class="input input_textarea input_comment input_icon input_mb js-input">
+							<textarea name="comment" placeholder="Ваш вопрос" class="input__input js-input-required"></textarea>
+							<i class="input__icon"></i>
+							<div class="input__error">Введите ваш вопрос</div>
+						</div>
+						<div class="input input_phone input_icon input_mb js-input">
+							<input type="tel" name="phone" placeholder="Ваш телефон" class="input__input js-input-phone js-input-required">
+							<i class="input__icon"></i>
+							<div class="input__error">Введите свой телефон</div>
+						</div>
+						<div class="input input_btn">
+							<input type="hidden" name="form" value="Задать вопрос" data-default="Задать вопрос" class="js-popup-form-name">
+							<button class="btn btn_accent text-white btn_xl btn_max js-popup-btn" data-default="Задать вопрос"></button>
+						</div>
+						<div class="form__policy">
+							<label class="input input_checkbox input-checkbox input-checkbox_default js-input">
+								<input class="input-checkbox__input js-input-required" type="checkbox" name="condition" checked>
+								<i class="input-checkbox__check"></i>
+								<span class="input-checkbox__title">Согласен с <a href="#popup-policy" class="text-link text-underline js-popup-open">политикой конфиденциальности</a></span>
+							</label>
+						</div>
+					</form>
+					<!-- /form -->
+				</div>
+				<!-- /inner -->
+				<!-- close -->
+				<div class="popup__close js-popup-close"></div>
+				<!-- /close -->
+			</div>
+			<!-- question -->
+			<!-- callback -->
+			<div class="popup__content popup__content_callback popup__content_md js-popup-content" id="popup-callback">
+				<!-- inner -->
+				<div class="popup__content-inner form item-bg">
+					<!-- heading -->
+					<div class="section__heading section__heading_left section__heading_mb-sm popup__heading">
+						<div class="section__title h2 popup__title js-popup-title" data-default="<strong>Закажите звонок</strong>"></div>
+						<div class="section__subtitle h4 popup__subtitle js-popup-subtitle" data-default="Наши специалисты свяжутся с&nbsp;Вами в&nbsp;ближайшее&nbsp;время"></div>
+					</div>
+					<!-- /heading -->
+					<!-- form -->
+					<form class="form__form js-form">
+						<div class="input input_textarea input_comment input_icon input_mb js-input">
+							<textarea name="comment" placeholder="Ваш вопрос" class="input__input js-input-required"></textarea>
+							<i class="input__icon"></i>
+							<div class="input__error">Введите ваш вопрос</div>
+						</div>
+						<div class="input input_name input_icon input_mb js-input">
+							<input type="text" name="name" placeholder="Ваше имя" class="input__input js-input-name js-input-required">
+							<i class="input__icon"></i>
+							<div class="input__error">Введите своё имя</div>
+						</div>
+						<div class="input input_phone input_icon input_mb js-input">
+							<input type="tel" name="phone" placeholder="Ваш телефон" class="input__input js-input-phone js-input-required">
+							<i class="input__icon"></i>
+							<div class="input__error">Введите свой телефон</div>
+						</div>
+						<div class="input input_btn">
+							<input type="hidden" name="form" value="Заказать звонок" data-default="Заказать звонок" class="js-popup-form-name">
+							<button class="btn btn_accent text-white btn_xl btn_max js-popup-btn" data-default="Заказать звонок"></button>
+						</div>
+						<div class="form__policy">
+							<label class="input input_checkbox input-checkbox input-checkbox_default js-input">
+								<input class="input-checkbox__input js-input-required" type="checkbox" name="condition" checked>
+								<i class="input-checkbox__check"></i>
+								<span class="input-checkbox__title">Согласен с <a href="#popup-policy" class="text-link text-underline js-popup-open">политикой конфиденциальности</a></span>
+							</label>
+						</div>
+					</form>
+					<!-- /form -->
+				</div>
+				<!-- /inner -->
+				<!-- close -->
+				<div class="popup__close js-popup-close"></div>
+				<!-- /close -->
+			</div>
+			<!-- callback -->
+			<!-- offer -->
+			<div class="popup__content popup__content_offer popup__content_md js-popup-content" id="popup-offer">
+				<!-- inner -->
+				<div class="popup__content-inner form item-bg">
+					<!-- heading -->
+					<div class="section__heading section__heading_left section__heading_mb-sm popup__heading">
+						<div class="section__title h2 popup__title js-popup-title" data-default="Скачайте <strong>полный <br>каталог</strong> с&nbsp;ценами"></div>
+						<div class="section__subtitle h4 popup__subtitle js-popup-subtitle" data-default="<strong>и получите 5% скидку на первый заказ</strong>"></div>
+					</div>
+					<!-- /heading -->
+					<!-- img -->
+					<div class="popup__img popup__img_1 section-img section-img_right">
+						<picture>
+							<source data-srcset="./img/bg/popup-img-2.webp" type="image/webp" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==">
+							<img class="js-lazy" data-src="./img/bg/popup-img-2.png" alt src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==">
+						</picture>
+					</div>
+					<!-- /img -->
+					<!-- form -->
+					<form class="form__form js-form" data-thanks="#popup-thanks-offer" data-download="./files/catalog.pdf" data-timeout="3000">
+						<div class="input input_text input_email input_icon input_mb js-input">
+							<input type="text" name="email" placeholder="E-mail" class="input__input js-input-email js-input-required">
+							<i class="input__icon"></i>
+							<div class="input__error">Введите ваш E-mail</div>
+						</div>
+						<div class="input input_phone input_icon input_mb js-input">
+							<input type="tel" name="phone" placeholder="Ваш номер" class="input__input js-input-phone js-input-required">
+							<i class="input__icon"></i>
+							<div class="input__error">Введите свой телефон</div>
+						</div>
+						<div class="input input_btn">
+							<input type="hidden" name="form" value="Скачать полный каталог с ценами" data-default="Скачать полный каталог с ценами" class="js-popup-form-name">
+							<button class="btn btn_accent text-white btn_xl btn_max"><span class="btn-icon btn-icon_pdf">Скачать полный каталог с&nbsp;ценами</span> <small>и получить 5% скидку на первый заказ</small></button>
+						</div>
+						<div class="form__policy">
+							<label class="input input_checkbox input-checkbox input-checkbox_default js-input">
+								<input class="input-checkbox__input js-input-required" type="checkbox" name="condition" checked>
+								<i class="input-checkbox__check"></i>
+								<span class="input-checkbox__title">Согласен с <a href="#popup-policy" class="text-link text-underline js-popup-open">политикой конфиденциальности</a></span>
+							</label>
+						</div>
+					</form>
+					<!-- /form -->
+				</div>
+				<!-- /inner -->
+				<!-- close -->
+				<div class="popup__close js-popup-close"></div>
+				<!-- /close -->
+			</div>
+			<!-- offer -->
+			<!-- thanks -->
+			<div class="popup__content popup__content_thanks popup__content_md js-popup-content" id="popup-thanks">
+				<!-- inner -->
+				<div class="popup__content-inner form item-bg">
+					<!-- heading -->
+					<div class="section__heading section__heading_left section__heading_mb-sm popup__heading">
+						<div class="section__title h2 popup__title"><strong>Спасибо за&nbsp;заявку!</strong></div>
+						<div class="section__subtitle h4 popup__subtitle">Наш менеджер свяжется с Вами в&nbsp;ближайшее&nbsp;время.</div>
+					</div>
+					<!-- /heading -->
+					<!-- btn -->
+					<div class="form__btn text-btn">
+						<button class="btn js-popup-close">Вернуться на&nbsp;сайт</button>
+					</div>
+					<!-- /btn -->
+				</div>
+				<!-- /inner -->
+				<!-- close -->
+				<div class="popup__close js-popup-close"></div>
+				<!-- /close -->
+			</div>
+			<!-- /thanks -->
+			<!-- thanks -->
+			<div class="popup__content popup__content_thanks popup__content_md js-popup-content" id="popup-thanks-offer">
+				<!-- inner -->
+				<div class="popup__content-inner form item-bg">
+					<!-- heading -->
+					<div class="section__heading section__heading_left section__heading_mb-sm popup__heading">
+						<div class="section__title h2 popup__title"><strong>Спасибо за&nbsp;скачивание!</strong> </div>
+						<div class="section__subtitle h4 popup__subtitle">Если есть вопросы - мы всегда готовы проконсультировать.</div>
+					</div>
+					<!-- /heading -->
+					<!-- btn -->
+					<div class="form__btn text-btn">
+						<button class="btn js-popup-close">Вернуться на&nbsp;сайт</button>
+					</div>
+					<!-- /btn -->
+				</div>
+				<!-- /inner -->
+				<!-- close -->
+				<div class="popup__close js-popup-close"></div>
+				<!-- /close -->
+			</div>
+			<!-- /thanks -->
+			<!-- policy -->
+			<div class="popup__content popup__content_policy js-popup-content" id="popup-policy">
+				<!-- inner -->
+				<div class="popup__content-inner form item-bg">
+					<!-- policy -->
+					<div class="policy popup__policy">
+						<!-- scroll -->
+						<div class="items policy__items">
+							<!-- heading -->
+							<div class="section__heading section__heading_left section__heading_mb-sm popup__heading">
+								<div class="section__title h2 popup__title"><strong>Пользовательское соглашение</strong> </div>
+							</div>
+							<!-- /heading -->
+							<!-- policy item -->
+							<div class="items__item policy__items-item">
+								<div class="items__title policy__items-title">1. Общие условия</div>
+								<div class="items__descr policy__items-descr">
+									<ul>
+										<li>
+											1.1. Настоящая Политика определяет порядок обработки и защиты информации о физических
+											лицах (далее – Пользователь), которая может быть получена нашей компанией при
+											использовании Пользователем данного сайта.
+										</li>
+										<li>
+											1.2. Целью настоящей Политики является обеспечение надлежащей защиты персональной
+											информации, которую Пользователь предоставляет о себе самостоятельно при использовании
+											данного Сайта для приобретения товаров/услуг, от несанкционированного доступа и
+											разглашения.
+										</li>
+										<li>
+											1.3. Отношения, связанные со сбором, хранением, распространением и защитой информации
+											предоставляемой Пользователем, регулируются настоящей Политикой и действующим
+											законодательством Российской Федерации.
+										</li>
+										<li>
+											1.4. Оставляя свои данные на Сайте и используя данный Сайт, Пользователь выражает свое
+											полное согласие с условиями настоящей Политики.
+										</li>
+										<li>
+											1.5. В случае несогласия Пользователя с условиями настоящей Политики использование данного <br>
+											Сайта должно быть немедленно прекращено.
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- /policy item -->
+							<!-- /policy item -->
+							<div class="items__item policy__items-item">
+								<div class="items__title policy__items-title">2. Цели сбора, обработки и хранения информации предоставляемой пользователями Сайта</div>
+								<div class="items__descr policy__items-descr">
+									<ul>
+										<li> 2.1. Обработка персональных данных Пользователя осуществляется в соответствии с законодательством Российской Федерации. Наша компания обрабатывает персональные данные Пользователя в целях:</li>
+										<li>- связи с Пользователем, направлении Пользователю транзакционных писем в момент получения заявки с формы на Сайте, направлении Пользователю уведомлений, запросов.</li>
+									</ul>
+								</div>
+							</div>
+							<!-- /policy item -->
+							<!-- policy item -->
+							<div class="items__item policy__items-item">
+								<div class="items__title policy__items-title">3. Условия обработки персональной информации предоставленной Пользователем и ее передачи
+									третьим лицам</div>
+								<div class="items__descr policy__items-descr">
+									<ul>
+										<li>3.1. Наша компания принимает все необходимые меры для защиты персональных данных Пользователя от неправомерного доступа, изменения, раскрытия или уничтожения.</li>
+										<li>3.2. Наша компания предоставляет доступ к персональным данным Пользователя только тем работникам, которым эта информация необходима для обеспечения функционирования Сайта и оказания Услуг/продажи товаров Пользователю</li>
+										<li>3.3. Наша компания вправе использовать предоставленную Пользователем информацию, в том числе персональные данные, в целях обеспечения соблюдения требований действующего законодательства Российской Федерации. Раскрытие предоставленной Пользователем информации может быть произведено лишь в соответствии с действующим законодательством Российской Федерации.</li>
+									</ul>
+								</div>
+							</div>
+							<!-- /policy item -->
+							<!-- policy item -->
+							<div class="items__item policy__items-item">
+								<div class="items__title policy__items-title">4. Условия пользования данным Сайтом</div>
+								<div class="items__descr policy__items-descr">
+									<ul>
+										<li>4.1. Пользователь при пользовании Сайтом, подтверждает, что:/li>
+										<li>- ознакомлен с настоящей Политикой, выражает свое согласие с ней и принимает на себя указанные в ней права и обязанности. Ознакомление с условиями настоящей Политики и проставление галочки под формой со ссылкой на данную Политику является письменным согласием Пользователя на сбор, хранение, обработку и передачу третьим лицам персональных данных предоставляемых Пользователем.</li>
+										<li>4.2. Наша компания не проверяет достоверность получаемой (собираемой) информации о Пользователях</li>
+									</ul>
+								</div>
+							</div>
+							<!-- /policy item -->
+							<!-- policy item -->
+							<div class="items__item policy__items-item">
+								<div class="items__title policy__items-title">5. В рамках настоящей Политики под «персональной информацией Пользователя» понимаются:</div>
+								<div class="items__descr policy__items-descr">
+									<ul>
+										<li>5.1. Данные предоставленные Пользователем самостоятельно при пользовании данным Сайтом, включая но, не ограничиваясь: имя, фамилия, пол, номер мобильного телефона и/или адрес электронной почты, город проживания, домашний адрес.</li>
+									</ul>
+								</div>
+							</div>
+							<!-- /policy item -->
+						</div>
+						<!-- /scroll -->
+					</div>
+					<!-- policy -->
+				</div>
+				<!-- /inner -->
+				<!-- close -->
+				<div class="popup__close js-popup-close"></div>
+				<!-- /close -->
+			</div>
+			<!-- /policy -->
+			<!-- video -->
+			<div class="popup__content popup__content_video popup__content_p-0 js-popup-content" id="popup-video">
+				<!-- inner -->
+				<div class="popup__content-inner form item-bg item-bg_padding-0">
+					<div class="popup__video img js-popup-video"></div>
+				</div>
+				<!-- /inner -->
+				<!-- close -->
+				<div class="popup__close js-popup-close"></div>
+				<!-- /close -->
+			</div>
+			<!-- /video -->
+		</div>
+		<!-- /inner -->
+	</div>
+	<!-- /wrapper -->
+</div>

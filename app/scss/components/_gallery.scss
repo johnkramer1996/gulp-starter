@@ -1,0 +1,38 @@
+.gallery {
+    &__items {
+        @include md-min {
+            margin-bottom: -70px;
+        }
+
+        &-item {
+            box-shadow: none;
+
+            &.swiper-slide {
+                margin-bottom: 70px;
+            }
+
+            &::before {
+                z-index: 4;
+            }
+
+        }
+
+        &-img {
+            &::before {
+                min-height: 300px;
+
+                @include md {
+                    min-height: 447px;
+                }
+            }
+        }
+
+        &-controls {
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                bottom: 70px;
+            }
+        }
+    }
+}

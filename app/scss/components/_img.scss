@@ -1,0 +1,200 @@
+.img {
+    display: block;
+    background: $color-light center / cover no-repeat;
+    position: relative;
+    border-radius: inherit;
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        transition: opacity .3s;
+    }
+
+    &::before {
+        position: relative;
+        padding-top: 60%;
+        z-index: 2;
+    }
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+    }
+
+    picture,
+    img {
+        border-radius: inherit;
+    }
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        object-fit: cover;
+        font-family: 'object-fit: cover;';
+    }
+
+    &__text {
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+        right: 15px;
+        max-width: calc(100% - 30px);
+        transform: translate(0, 50%);
+        text-align: center;
+        z-index: 5;
+
+        @include xxs {
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            max-width: calc(100% - 20px);
+        }
+
+        &-bg {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 10px 15px;
+            background: #fff;
+            min-width: 250px;
+            box-shadow: 0px 4px 30px rgba(49, 49, 49, 0.16);
+            border-radius: 2px;
+        }
+    }
+}
+
+.img {
+    &_contain {
+        background-color: transparent;
+    }
+
+    &_contain img {
+        object-fit: contain;
+        font-family: 'object-fit: contain;';
+    }
+
+    &_auto {
+        background-color: transparent;
+    }
+
+    &_auto img {
+        object-fit: fill;
+        font-family: 'object-fit: fill;';
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    &_doc {
+        &::before {
+            padding-top: 120%;
+            border: 1px solid #EBEBEB;
+            box-sizing: border-box;
+        }
+    }
+}
+
+.img-hover {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    opacity: 1;
+    border-radius: inherit;
+    transition: opacity .5s, background-color .5s;
+
+    @include lg {
+        opacity: 1;
+    }
+
+    @include md {
+        top: 0;
+    }
+
+    &:hover {
+        opacity: 1;
+        background: rgba(36, 33, 28, 0.87);
+
+        &::before {
+            right: 50%;
+            bottom: 50%;
+            transform: translate(50%, 50%);
+            width: 113px;
+            height: 113px;
+        }
+    }
+
+    &:active {
+        opacity: 1;
+
+        &::before {
+            transform: translate(50%, 50%) scale(.95);
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        margin: auto;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+        background: $color-accent center / 30% no-repeat;
+        background-image: url("data:image/svg+xml,%0A%3Csvg width='42' height='55' viewBox='0 0 42 55' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='21.0699' cy='20.7922' r='19.4028' stroke='black' stroke-width='2'/%3E%3Cpath d='M11.6535 38.0549L2.23688 53.7494' stroke='black' stroke-width='2'/%3E%3C/svg%3E%0A");
+        transition: all .5s;
+    }
+
+    &:hover &__text {
+        opacity: 1;
+    }
+
+    &:active &__text {
+        color: $color-accent;
+    }
+
+    &__text {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin-top: 70px;
+        padding: 0 10px;
+        text-align: center;
+        font-weight: 500;
+        color: #fff;
+        font-size: 16px;
+        z-index: 5;
+        opacity: 0;
+        transition: opacity .3s, color .3s;
+    }
+
+    &_icon-none::before {
+        display: none;
+    }
+
+    &_icon-none &__text {
+        margin-top: 0;
+        transform: translate(0, -50%);
+    }
+
+    &_text &::before {
+        bottom: 20px;
+    }
+}
